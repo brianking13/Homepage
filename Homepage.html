@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+<style>
+#mySidenav a {
+    position: absolute;
+    left: -110px;
+    transition: 0.3s;
+    padding: 1em;
+    width: 6.5em;
+    text-decoration: none;
+    font-size: 19px;
+    font-style: none;
+
+    border-radius: 0 9px 9px 0;
+      border: 0px solid green;
+
+
+
+}
+
+#mySidenav a:hover {
+    left: 0;
+
+
+}
+
+#mySidenav i {
+  float: right;
+  padding-left: 1.5 em;
+
+}
+#try a {
+    position: absolute;
+    right: -110px;
+    transition: 0.3s;
+    padding: 1em;
+    width: 6.5em;
+    text-decoration: none;
+    font-size: 19px;
+    font-style: none;
+    text-align: right;
+
+    border-radius: 9px 0 0 9px;
+      border: 0px solid green;
+
+
+
+}
+
+#try a:hover {
+    right: 0;
+
+}
+
+#try i {
+  float: left;
+  padding-left: 1.5 em;
+
+}
+
+
+
+#calendar {
+    top: 10vh;
+    background-color: #979797;
+    color:#283747;
+    box-shadow: 1px 1px #3E3E3E  ;
+}
+
+
+#To-Do {
+    top: 27.5vh;
+    background-color: #979797;
+    color:#283747;
+box-shadow: 1px 1px #3E3E3E  ;
+}
+
+#E-Mail {
+    top: 45vh;
+    background-color: #979797;
+    color:#283747;
+    box-shadow: 1px 1px #3E3E3E  ;
+}
+
+#school {
+    top: 62.5vh;
+    background-color: #979797;
+    color:#283747;
+    box-shadow: 1px 1px #3E3E3E  ;
+}
+
+
+
+#m {
+    top: 80vh;
+    background-color: #979797;
+    color:#283747;
+    box-shadow: 1px 1px #3E3E3E  ;
+  }
+  #webassign {
+      top: 10vh;
+      background-color: #979797;
+      color:#283747;
+      box-shadow: 1px 1px #3E3E3E  ;
+
+  }
+  #mylab {
+      top: 27.5vh;
+      background-color: #979797;
+      color:#283747;
+      box-shadow: 1px 1px #3E3E3E  ;
+    }
+  #wp {
+        top: 45vh;
+        background-color: #979797;
+        color:#283747;
+        box-shadow: 1px 1px #3E3E3E  ;
+    }
+  #ca{
+        top: 62.5vh;
+        background-color: #979797;
+        color:#283747;
+        box-shadow: 1px 1px #3E3E3E  ;
+      }
+  #photos {
+            top: 80vh;
+            background-color: #979797;
+            color:#283747;
+            box-shadow: 1px 1px #3E3E3E  ;
+          }
+.clock:hover{
+  background-color: #A4A4A4;
+  color: #434343  ;
+  transition: .4s;
+  cursor: pointer;
+  border-radius: 35px 35px 35px 35px;
+  box-shadow: 2px 2px #3E3E3E  ;
+  height: 17.4vh;
+  margin-top: 29.5vh;
+
+}
+.clock:active{
+  font-size: 12vh;
+
+}
+.clock {
+
+  margin: auto;
+  transition: .2s;
+    border: 0px solid green;
+    width: 50vh;
+    height: 17.1vh;
+    user-select: none
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30vh;
+  margin-bottom: auto;
+	text-align: center;
+	font-size: 15vh;
+	font-family: arial;
+  font-weight: lighter;
+	color: #3E3E3E;
+  text-shadow: #808B96 0px 0 .1px;
+  background-color:#979797;
+  box-shadow: 1px 1px #3E3E3E  ;
+  border-radius: 25px 25px 25px 25px;
+}
+body {
+  background-color: black;
+  color: #979797;
+  overflow: hidden;
+
+}
+
+</style>
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+
+    m = checkTime(m);
+
+    document.getElementById('txt').innerHTML =
+    h + ":" + m ;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="https://calendar.google.com/calendar/b/0/r?pli=0" id="calendar">Calendar <i class="far fa-calendar-alt"></i></a>
+  <a href="https://keep.google.com/u/0" id="To-Do">To-Do <i class="fas fa-list-ul"></i></a>
+  <a href="https://mail.google.com/mail/u/0/" id="E-Mail">E-Mail <i class="far fa-envelope"></i></a>
+  <a href="https://www.hs-esslingen.de/" id="school">School <i class="fas fa-pencil-alt"></i></a>
+  <a href="https://messages.android.com/" id="m">Messages <i class="far fa-comment"></i></a>
+</div>
+<div id="try" class="try">
+  <a href="https://webmail.hs-esslingen.de/src/login.php" id="webassign">Uni<i class="fas fa-book"></i></a>
+  <a href="https://docs.google.com/document/u/0/?tgif=d" id="mylab">G-Docs    <i class="far fa-file-alt"></i></a>
+<a href="https://drive.google.com/drive/u/0/my-drive" id="wp">G-Drive<i class="far fa-file-excel"></i></a>
+<a href="https://www.excel-pratique.com/en/vba.php" id="ca">VBA <i class="fas fa-code"></i></a>
+<a href="https://photos.google.com/" id="photos">Photos <i class="far fa-image"></i></a>
+
+
+</div>
+
+
+
+<body onload="startTime()">
+<div id="txt" class="clock" ></div>
+
+
+</body>
+</html>
